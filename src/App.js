@@ -36,11 +36,39 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Client Auth Projesi: Friends</h1>
-      {isAuth && <Link onClick={handleLogout}>Logout</Link>}
-      {!isAuth && <Link to="/">Login</Link>}
-      <Link to="/friends">Friends List</Link>
-      <Link to="/friends/add">Add Friend</Link>
+      <div className="flex justify-between  py-2 font-extrabold border-black border-b-4">
+        <h1 className="ml-5 p-3">FRIENDS DATABASE</h1>
+        <div className="flex gap-x-12">
+          {isAuth && (
+            <Link
+              className="bg-black text-white text-sm p-3 active:bg-white active:text-white"
+              onClick={handleLogout}
+            >
+              LOGOUT
+            </Link>
+          )}
+          {!isAuth && (
+            <Link
+              className="bg-black text-white text-sm p-3 active:bg-white active:text-white"
+              to="/"
+            >
+              LOGIN
+            </Link>
+          )}
+          <Link
+            className="bg-black text-white text-sm p-3 active:bg-white active:text-white"
+            to="/friends"
+          >
+            FRIENDS LIST
+          </Link>
+          <Link
+            className="bg-black text-white text-sm p-3 active:bg-white active:text-white "
+            to="/friends/add"
+          >
+            ADD FRIEND
+          </Link>
+        </div>
+      </div>
 
       <Switch>
         <Route exact path="/">

@@ -13,10 +13,13 @@ function FriendsList() {
   }, []);
 
   return (
-    <div>
+    <div className="w-1/2 mx-auto my-20">
+      <h1 className="mt-10 mb-5 text-7xl font-extrabold ">FRIENDS LIST</h1>
       {friends.map((friend) => (
         <p key={friend.id}>
-          {friend.name}- {friend.email}
+          <div className="p-3 text-2xl font-extrabold">
+            - {friend.name}- {friend.email}
+          </div>
         </p>
       ))}
     </div>

@@ -23,10 +23,10 @@ function AddFriendForm() {
       .catch((err) => console.log(err));
   };
   return (
-    <div className="flex flex-col flex-wrap content-center">
-      <h3 className="my-10 text-6xl font-bold ">ADD FRIEND</h3>
+    <div className="flex flex-col items-center">
+      <h3 className="mt-10 mb-5 text-7xl font-extrabold ">ADD FRIEND</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>
+        <label className="font-extrabold">
           {" "}
           NAME
           <input
@@ -38,7 +38,7 @@ function AddFriendForm() {
             })}
           />
         </label>
-        <label>
+        <label className="font-extrabold">
           {" "}
           EMAIL
           <input

@@ -26,37 +26,41 @@ function LoginForm(props) {
   };
   console.log(props);
   return (
-    <div className="flex flex-col flex-wrap content-center">
-      <h3 className="my-10 text-6xl font-bold ">LOGIN</h3>
+    <div className="flex flex-col items-center">
+      <h3 className="mt-10 mb-5 text-7xl font-extrabold ">LOGIN</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label>
-          {" "}
-          USERNAME
-          <input
-            className="block w-30vh bg-black w-96 h-12 text-white"
-            type="text"
-            placeholder="username"
-            value="workintech"
-            {...register("username", {
-              required: true,
-              maxLength: 80,
-            })}
-          />
-        </label>
-        <label>
-          {" "}
-          PASSWORD
-          <input
-            className="block bg-black w-96 h-12 text-white"
-            type="password"
-            placeholder="password"
-            value="wecandoit"
-            {...register("password", {
-              required: true,
-              maxLength: 100,
-            })}
-          />
-        </label>
+        <div>
+          <label className="font-extrabold">
+            {" "}
+            USERNAME
+            <input
+              className="block w-30vh bg-black w-96 h-12 text-white"
+              type="text"
+              placeholder="username"
+              value="workintech"
+              {...register("username", {
+                required: true,
+                maxLength: 80,
+              })}
+            />
+          </label>
+        </div>
+        <div>
+          <label className="font-extrabold">
+            {" "}
+            PASSWORD
+            <input
+              className="block bg-black w-96 h-12 text-white"
+              type="password"
+              placeholder="password"
+              value="wecandoit"
+              {...register("password", {
+                required: true,
+                maxLength: 100,
+              })}
+            />
+          </label>
+        </div>
         <button
           type="submit"
           className="mt-6 block bg-black w-96 text-white h-12"
