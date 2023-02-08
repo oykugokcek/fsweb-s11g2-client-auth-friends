@@ -2,8 +2,9 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
+import { axiosWithAuth } from "../App";
 
-function LoginForm(props) {
+function AddFriendForm() {
   const {
     register,
     handleSubmit,
@@ -13,47 +14,39 @@ function LoginForm(props) {
   const history = useHistory();
   const onSubmit = (data) => {
     console.log(data);
-    axios
-      .post("http://localhost:9000/api/login", data, {
-        headers: { "Content-Type": "application/json" },
-      })
+    axiosWithAuth()
+      .post("http://localhost:9000/api/friends", data)
       .then((res) => {
-        localStorage.setItem("s11g2token", res.data.token);
-        props.setIsAuth(true);
+        console.log(res.data);
         history.push(`/friends`);
       })
       .catch((err) => console.log(err));
   };
-  console.log(props);
   return (
     <div className="flex flex-col flex-wrap content-center">
-      <h3 className="my-10 text-6xl font-bold ">LOGIN</h3>
+      <h3 className="my-10 text-6xl font-bold ">ADD FRIEND</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label>
           {" "}
-          USERNAME
+          NAME
           <input
             className="block w-30vh bg-black w-96 h-12 text-white"
             type="text"
-            placeholder="username"
-            value="workintech"
-            {...register("username", {
+            placeholder="name"
+            {...register("name", {
               required: true,
-              maxLength: 80,
             })}
           />
         </label>
         <label>
           {" "}
-          PASSWORD
+          EMAIL
           <input
             className="block bg-black w-96 h-12 text-white"
-            type="password"
-            placeholder="password"
-            value="wecandoit"
-            {...register("password", {
+            type="email"
+            placeholder="email"
+            {...register("email", {
               required: true,
-              maxLength: 100,
             })}
           />
         </label>
@@ -68,4 +61,4 @@ function LoginForm(props) {
   );
 }
 
-export default LoginForm;
+export default AddFriendForm;

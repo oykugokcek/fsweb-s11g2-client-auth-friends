@@ -41,23 +41,23 @@ Tüm karakter nesneleri aşağıdaki biçimdedir:
 
 #### Login (kullanıcı girişi) bileşenini oluşturun
 
-- [ ] Örnekteki login sayfası gibi [mockup](./designs/login_mockup.png) bir login bileşeni oluşturun.
-- [ ] `App.js` içine, `/` ya da `/login` ziyaret edildiğinde bu bileşeni gösteren bir route ekleyin
-- [ ] Login formu gönderildiğinde, döndürülen tokeni localStorage e kaydedin ve sayfayı FriendsList sayfasına yönlendirin
+- [x] Örnekteki login sayfası gibi [mockup](./designs/login_mockup.png) bir login bileşeni oluşturun.
+- [x] `App.js` içine, `/` ya da `/login` ziyaret edildiğinde bu bileşeni gösteren bir route ekleyin
+- [x] Login formu gönderildiğinde, döndürülen tokeni localStorage e kaydedin ve sayfayı FriendsList sayfasına yönlendirin
 
 #### FriendsList bileşenini oluşturun
 
-- [ ] Örnektesi `FriendsList` [mockup](./designs/friendslist_mockup.png) gibi bir bileşen oluşturun.
-- [ ] Bileşen bağlandığında, tüm karakterleri gönderen bir API call oluşturun. Bunun korumalı bir route olduğunu unutmayın.
-- [ ] `App.js` içinde, `/friends` ziyaret edildiğinde bu bileşeni görüntüleyen bir route ekleyin
-- [ ] Login bileşeninize, oluşturduğunuz `FriendsList` bileşenine yönlendirme kabiliyeti ekleyin.
+- [x] Örnektesi `FriendsList` [mockup](./designs/friendslist_mockup.png) gibi bir bileşen oluşturun.
+- [x] Bileşen bağlandığında, tüm karakterleri gönderen bir API call oluşturun. Bunun korumalı bir route olduğunu unutmayın.
+- [x] `App.js` içinde, `/friends` ziyaret edildiğinde bu bileşeni görüntüleyen bir route ekleyin
+- [x] Login bileşeninize, oluşturduğunuz `FriendsList` bileşenine yönlendirme kabiliyeti ekleyin.
 
 #### addFriends bileşeni oluşturun
 
-- [ ] Örnekteki `AddFriend` [mockup](./designs/addfriends_mockup.png) gibi bir karakter ekleme bileşeni oluşturun.
-- [ ] Tüm karakter özellikleri için inputlar ve bir submit butonu içeren bir bileşen olmalı
-- [ ] Form gönderildiğinde, uygun api uç noktasına yeni karakter datanızı gönderen bir sorgu atın. Bunun korumalı bir route olduğunu unutmayın.
-- [ ] `App.js` içinde, `/friends/add` ziyaret edildiğinde bu bileşeni görüntüleyen bir route ekleyin.
+- [x] Örnekteki `AddFriend` [mockup](./designs/addfriends_mockup.png) gibi bir karakter ekleme bileşeni oluşturun.
+- [x] Tüm karakter özellikleri için inputlar ve bir submit butonu içeren bir bileşen olmalı
+- [x] Form gönderildiğinde, uygun api uç noktasına yeni karakter datanızı gönderen bir sorgu atın. Bunun korumalı bir route olduğunu unutmayın.
+- [x] `App.js` içinde, `/friends/add` ziyaret edildiğinde bu bileşeni görüntüleyen bir route ekleyin.
 
 #### Logout butonu oluşturun
 
